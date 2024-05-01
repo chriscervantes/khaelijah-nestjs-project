@@ -24,7 +24,7 @@ export abstract class AbstractRepository<TDocument extends AbstractDocument> {
 
     if (!document) {
       this.logger.warn(
-        `Document was not found based on the filterQuery ${filterQuery}`,
+        `Document was not found based on the filterQuery ${JSON.stringify(filterQuery)}`,
       );
       throw new NotFoundException('Document Not Found');
     }

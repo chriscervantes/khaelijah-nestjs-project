@@ -17,15 +17,7 @@
         "tsConfigPath": "libs/common/tsconfig.lib.json"
       }
     },
-    "khaelijah": {
-      "type": "application",
-      "root": "apps/khaelijah",
-      "entryFile": "main",
-      "sourceRoot": "apps/khaelijah/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/khaelijah/tsconfig.app.json"
-      }
-    },
+
     "reservations": {
       "type": "application",
       "root": "apps/reservations",
@@ -33,6 +25,15 @@
       "sourceRoot": "apps/reservations/src",
       "compilerOptions": {
         "tsConfigPath": "apps/reservations/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
       }
     }
   },
