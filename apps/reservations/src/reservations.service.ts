@@ -6,11 +6,12 @@ import { ReservationsRepository } from './reservations.repository';
 @Injectable()
 export class ReservationsService {
   constructor(private readonly reservationRepository: ReservationsRepository) {}
-  async create(createReservationDto: CreateReservationDto) {
+  async create(createReservationDto: CreateReservationDto, userId: string) {
+    console.log('userId', userId);
     const createdDocument = await this.reservationRepository.create({
       ...createReservationDto,
       timestamp: new Date(),
-      userId: '123',
+      userId,
       invoiceId: '123',
     });
 
