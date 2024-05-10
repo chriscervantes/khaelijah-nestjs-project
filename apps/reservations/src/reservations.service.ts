@@ -8,14 +8,12 @@ export class ReservationsService {
   constructor(private readonly reservationRepository: ReservationsRepository) {}
   async create(createReservationDto: CreateReservationDto, userId: string) {
     console.log('userId', userId);
-    const createdDocument = await this.reservationRepository.create({
+    return await this.reservationRepository.create({
       ...createReservationDto,
       timestamp: new Date(),
       userId,
       invoiceId: '123',
     });
-
-    return JSON.parse(JSON.stringify(createdDocument));
   }
 
   findAll() {

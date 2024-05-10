@@ -22,6 +22,7 @@ export class AuthService {
       expires.getSeconds() + this.configService.get('JWT_EXPIRATION'),
     );
 
+    console.log('expires =>', new Date(expires).toUTCString());
     const token = this.jwtService.sign(tokenPayload, {
       secret: this.configService.get('JWT_SECRET'),
     });
